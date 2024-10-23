@@ -2,5 +2,39 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
+header {
+    background: purple;
+    height: 100px
+}
+
+header h1 {
+    text-align: center;
+    color: white;
+    line-height: 100px;
+}
+
+article {
+    padding: 1rem;
+    margin: 1rem;
+    background: aqua;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+}
+/* Gives every child of article a flex value of 1. This is added up 1 + 1 + 1 and then determines how much room each article will take up on the viewport ie. 1/3 */
+article {
+    /*flex: calc((100% / 3) - 2rem); */
+
+    /* The second value after "flex: 1" defines the minimum width */
+    flex: 1 200px;
+} 
+
+/*Gives the 2nd child the article to have a flex value of 2. This will take up twice as much space as the other articles */
+/*article:nth-of-type(2) {
+    flex: 2; 
+} */
